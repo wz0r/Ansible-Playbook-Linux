@@ -3,7 +3,7 @@
     - name: Install required system packages
       apt:
         pkg:
-          - apt-htop
+          - htop
         state: latest
         force_apt_get: yes
         update_cache: true
