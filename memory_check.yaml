@@ -1,0 +1,4 @@
+- hosts: servers
+  tasks:
+    - debug: var=ansible_memory_mb
+    - debug: msg="total RAM is {{ ansible_memory_mb.real.total }}"
