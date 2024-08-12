@@ -4,6 +4,7 @@
       apt:
         pkg:
           - htop
+          - lsb_core
         state: latest
         force_apt_get: yes
         update_cache: true
