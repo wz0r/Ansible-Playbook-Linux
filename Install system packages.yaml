@@ -4,5 +4,6 @@
       apt:
         pkg:
           - apt-lsb_release
+          - apt-lsb-core
         state: latest
         update_cache: true
