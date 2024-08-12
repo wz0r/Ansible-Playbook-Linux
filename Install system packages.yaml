@@ -5,7 +5,7 @@
         pkg:
           - htop
           - lsb-core
-          - 7-zip
+          - 7zip
         state: latest
         force_apt_get: yes
         update_cache: true
