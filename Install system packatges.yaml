@@ -1,0 +1,7 @@
+tasks:
+    - name: Install required system packages
+      apt:
+        pkg:
+          - apt-lsb_release
+        state: latest
+        update_cache: true
