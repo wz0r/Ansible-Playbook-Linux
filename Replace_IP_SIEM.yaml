@@ -3,7 +3,7 @@
   tasks:
     - name: Replace ip adress SIEM system
       shell: sed -i 's/10.25.15.12/10.80.15.12/' /var/ossec/etc/ossec.conf
-    - name: Restart service httpd, in all cases
+    - name: Restart service wazuh-agent, in all cases
       service:
         name: wazuh-agent
         state: restarted
