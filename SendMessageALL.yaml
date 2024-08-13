@@ -1,11 +1,3 @@
 - hosts: servers
   tasks:
   - name: Send a message to all users
-  - command: > # '>' helps to enter multiple lines of
-      text; you can also use line separator '\'
-      wall "Attention all users, please be advised that system
-      maintenance will begin in 30 minutes.
-      Please save any unsaved work and log out of the system to avoid any
-      potential data loss.
-      We apologize for any inconvenience caused."
-      - ignore_errors: yes # Ignore errors if there are no logged-in users
