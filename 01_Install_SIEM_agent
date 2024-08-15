@@ -1,0 +1,14 @@
+- hosts: servers
+  tasks:
+    - name: Install repo
+      shell: echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | tee -a /etc/apt/sources.list.d/wazuh.list
+    - name: Update repositories cache and install "wazuh-agent" package  
+      apt:
+        update_cache: yes
+    - name: Replace ip adress SIEM system
+      shell: WAZUH_MANAGER="10.80.15.12" apt-get install wazuh-agent
+    - name: Restart service wazuh-agent, in all cases
+      service:
+        name: wazuh-agent
+        state: started
+        enabled: yes
