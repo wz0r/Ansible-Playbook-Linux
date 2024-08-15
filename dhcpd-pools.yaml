@@ -4,4 +4,4 @@
       command: dhcpd-pools
       register: dhcpd_res
     - debug: 
-        msg: "{{ dhcpd_res.results.stdout_lines }}"
+        msg: "{{ dhcpd_res.stdout_lines }}"
