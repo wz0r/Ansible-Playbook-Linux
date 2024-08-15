@@ -3,5 +3,5 @@
     - name:
       command: dhcpd-pools
       register: dhcpd_res
-    -debug:
+    - debug:
       msg="{{ dhcpd_res }}"
