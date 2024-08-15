@@ -1,0 +1,4 @@
+- hosts: dhcp
+  tasks:
+    - name:
+      command: dhcpd-pools
