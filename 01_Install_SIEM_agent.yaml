@@ -1,4 +1,4 @@
-- hosts: servers
+- hosts: siem
   tasks:
     - name: Install repo
       shell: echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | tee -a /etc/apt/sources.list.d/wazuh.list
