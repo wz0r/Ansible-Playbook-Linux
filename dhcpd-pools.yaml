@@ -3,5 +3,6 @@
     - name:
       command: dhcpd-pools
       register: dhcpd_res
-    - debug: 
-        msg: "{{ dhcpd_res.stdout_lines }}"
+    
+    - name: Debug registered var
+      debug: var=dhcpd_res.stdout_lines
