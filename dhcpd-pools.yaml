@@ -2,3 +2,5 @@
   tasks:
     - name:
       command: dhcpd-pools
+      register: dhcp-pools
+    - debug: var=dhcp-pools.stdout_lines
