@@ -15,7 +15,7 @@
         state: started
         enabled: yes
     - name: Remove "wazuh-agent" apt update
-        shell: sed -i "s/^deb/#deb/" /etc/apt/sources.list.d/wazuh.list
+      shell: sed -i "s/^deb/#deb/" /etc/apt/sources.list.d/wazuh.list
     - name: Update repositories cache and install "wazuh-agent" package  
       apt:
         update_cache: yes
