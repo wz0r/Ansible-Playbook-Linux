@@ -1,9 +1,9 @@
 - hosts: siem
   tasks:
     - name: Install a list of packages
-       apt:
-        pkg:
-        - curl
+      apt:
+        name: curl
+        update_cache: yes
     - name: Install GPG "wazuh-agent"
       shell: curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/wazuh.gpg --import && chmod 644 /usr/share/keyrings/wazuh.gpg
     - name: Install repo
