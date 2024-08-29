@@ -21,6 +21,6 @@
     - name: Install Docker
       command: /var/azuracast/./docker.sh install-docker
     - name: Install Docker Compose
-      command: /var/azuracast/./docker.sh install-compose
+      command: /var/azuracast/./docker.sh install-docker-compose
     - name: Install AzuraCast
-      command: /var/azuracast/./docker.sh install
+      command: yes 'Y' | /var/azuracast/./docker.sh install
