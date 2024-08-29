@@ -1,4 +1,4 @@
-- hosts: servers
+- hosts: install
   tasks:
     - name: Install required system packages
       apt:
