@@ -8,6 +8,9 @@
           - ccze
           - net-tools
           - mc
+          - ifupdown
+          - resolvconf
+          - curl
         state: latest
         force_apt_get: yes
         update_cache: true
