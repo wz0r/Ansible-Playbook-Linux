@@ -11,11 +11,9 @@
         state: latest
         force_apt_get: yes
         update_cache: true
-    - name: Creat Derictory
-      command: mkdir -p /var/azuracast
-      command: cd /var/azuracast
+    - name: Create Directory
+      command: mkdir -p /var/azuracast && cd /var/azuracast
     - name: Download script
       command: curl -fsSL https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh > docker.sh
     - name: Change Permissions
-      command: chmod a+x docker.sh
-      command: ./docker.sh install
+      command: chmod a+x docker.sh &&./docker.sh install
