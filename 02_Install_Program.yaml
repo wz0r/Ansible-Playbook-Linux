@@ -1,5 +1,5 @@
 tasks:
-  - name: "Install git, MySQL, PHP, and other dependencies."
+  - name: "Install Program."
     apt: name={{ item }} state=present
     with_items:
       - git
