@@ -15,6 +15,6 @@
     - name: Create Directory
       command: mkdir -p /var/azuracast && cd /var/azuracast
     - name: Download script
-      command: curl -fsSL https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh > docker.sh
+      command: wget https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh
     - name: Change Permissions
       command: chmod a+x docker.sh && ./docker.sh install
