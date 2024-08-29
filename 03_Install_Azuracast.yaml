@@ -7,6 +7,7 @@
           - curl
           - ccze
           - net-tools
+          - mc
         state: latest
         force_apt_get: yes
         update_cache: true
