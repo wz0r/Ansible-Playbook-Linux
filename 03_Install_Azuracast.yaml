@@ -16,4 +16,4 @@
     - name: Download script
       command: curl -fsSL https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh > docker.sh
     - name: Change Permissions
-      command: chmod a+x docker.sh &&./docker.sh install
+      command: chmod a+x docker.sh && ./docker.sh install
