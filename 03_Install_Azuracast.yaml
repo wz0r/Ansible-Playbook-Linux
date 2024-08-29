@@ -1,0 +1,10 @@
+- hosts: servers
+  tasks:
+    - name: Creat Derictory
+      command: mkdir -p /var/azuracast
+      command: cd /var/azuracast
+    - name: Download script
+      command: curl -fsSL https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh > docker.sh
+    - name: Change Permissions
+      command: chmod a+x docker.sh
+      command: ./docker.sh install
