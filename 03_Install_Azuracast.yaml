@@ -1,4 +1,4 @@
-- hosts: servers
+- hosts: azuracast.ghp.lc
   tasks:
     - name: Install required system packages
       apt:
