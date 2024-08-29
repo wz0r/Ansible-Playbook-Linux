@@ -4,8 +4,10 @@
       apt:
         pkg:
           - htop
-          - lsb-core
           - 7zip
+          - ccze
+          - net-tools
+          - mc
         state: latest
         force_apt_get: yes
         update_cache: true
