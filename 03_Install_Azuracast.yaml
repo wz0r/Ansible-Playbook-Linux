@@ -18,5 +18,9 @@
       command: wget https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh -O /var/azuracast/docker.sh
     - name: Change Permissions
       command: chmod a+x /var/azuracast/docker.sh
-    - name: Change Permissions
+    - name: Install Docker
+      command: /var/azuracast/./docker.sh install-docker
+    - name: Install Docker Compose
+      command: /var/azuracast/./docker.sh install-compose
+    - name: Install AzuraCast
       command: /var/azuracast/./docker.sh install
