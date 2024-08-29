@@ -13,10 +13,10 @@
         force_apt_get: yes
         update_cache: true
     - name: Create Directory
-      command: mkdir -p /var/azuracast && cd /var/azuracast
+      command: mkdir -p /var/azuracast
     - name: Download script
-      command: wget https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh
+      command: cd /var/azuracas && wget https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh 
     - name: Change Permissions
-      command: chmod a+x docker.sh && 
+      command: chmod a+x docker.sh
     - name: Change Permissions
       command: /var/azuracast/./docker.sh install
