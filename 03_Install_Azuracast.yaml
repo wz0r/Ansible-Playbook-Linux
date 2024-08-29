@@ -1,5 +1,14 @@
 - hosts: servers
   tasks:
+    - name: Install required system packages
+      apt:
+        pkg:
+          - htop
+          - curl
+          - ccze
+        state: latest
+        force_apt_get: yes
+        update_cache: true
     - name: Creat Derictory
       command: mkdir -p /var/azuracast
       command: cd /var/azuracast
