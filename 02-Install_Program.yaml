@@ -1,0 +1,7 @@
+tasks:
+  - name: "Install git, MySQL, PHP, and other dependencies."
+    apt: name={{ item }} state=present
+    with_items:
+      - git
+      - curl
+      - ccze
