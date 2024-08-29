@@ -17,6 +17,6 @@
     - name: Download script
       command: wget https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh -o /var/azuracast/docker.sh
     - name: Change Permissions
-      command: chmod a+x docker.sh
+      command: chmod a+x /var/azuracast/docker.sh
     - name: Change Permissions
       command: /var/azuracast/./docker.sh install
