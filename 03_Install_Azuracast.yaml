@@ -6,6 +6,7 @@
           - htop
           - curl
           - ccze
+          - net-tools
         state: latest
         force_apt_get: yes
         update_cache: true
