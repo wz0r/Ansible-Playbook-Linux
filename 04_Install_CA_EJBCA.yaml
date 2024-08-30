@@ -19,7 +19,7 @@
     - name: Change Permission
       command: chmod a+x /home/ca/tmp/get-docker.sh
     - name: Install Docker
-      command: /home/ca/tmp/./get-docker.sh --dry-run
+      command: /home/ca/tmp/./get-docker.sh
     - name: Pull EJBCA container
       command: docker pull keyfactor/ejbca-ce
     - name: Start EJBCA container
