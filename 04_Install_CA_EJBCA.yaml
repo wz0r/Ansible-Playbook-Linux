@@ -22,5 +22,5 @@
       command: /home/ca/tmp/./get-docker.sh
     - name: Pull EJBCA container
       command: docker pull keyfactor/ejbca-ce
-    - name: Start EJBCA container
-      command: docker run -it --rm -p 80:8080 -p 443:8443 -h localhost -e TLS_SETUP_ENABLED="true" keyfactor/ejbca-ce
+#    - name: Start EJBCA container
+#      command: docker run -it --rm -p 80:8080 -p 443:8443 -h localhost -e TLS_SETUP_ENABLED="true" keyfactor/ejbca-ce
