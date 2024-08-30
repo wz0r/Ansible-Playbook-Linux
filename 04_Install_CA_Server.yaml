@@ -1,0 +1,26 @@
+- hosts: ca.ghp.lc
+  tasks:
+    - name: (01) Install required system packages
+      apt:
+        pkg:
+          - htop
+          - curl
+          - ccze
+          - net-tools
+          - mc
+          - wget
+        state: latest
+        force_apt_get: yes
+        update_cache: true
+    - name: Create temp dir
+      command: mkdir -p /home/ca/tmp
+    - name: Download Script
+      command: curl -fsSL https://get.docker.com -o /home/ca/tmp/get-docker.sh
+    - name: Change Permission
+      command: chmod a+x /home/ca/tmp/get-docker.sh
+    - name: Install Docker
+      command: /home/ca/tmp/./get-docker.sh --dry-run
+    - name: Pull EJBCA container
+      command: docker pull keyfactor/ejbca-ce
+    - name: Start EJBCA container
+      command: docker run -it --rm -p 80:8080 -p 443:8443 -h localhost -e TLS_SETUP_ENABLED="true" keyfactor/ejbca-ce
