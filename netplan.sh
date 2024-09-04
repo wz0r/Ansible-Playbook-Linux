@@ -1,18 +1,17 @@
 #!/bin/bash
 
-ip=10.25.15.12
+ip=10.80.6.122
 
-gw=10.25.15.1
+gw=10.80.6.1
 
 interface = ens160
 
-sudo apt install mc ccze ifupdown net-tools resolvconf -y
 cd /etc/default/
 cp grub grub.$(date +%y%m%d)
 sed -i 's/=""/="netcfg\/do_not_use_netplan=true"/g' grub
 sudo update-grub
 sudo apt update
-sudo apt install ifupdown net-tools resolvconf curl -y
+sudo apt install mc ccze ifupdown net-tools resolvconf curl -y
 
 cd /etc/network/interfaces.d/
 cat << EOF > $interface
