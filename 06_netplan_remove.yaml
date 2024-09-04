@@ -19,4 +19,4 @@
     - name: (03) Change permissions
       command: chmod +x /tmp/netplan/netplan_remove.yaml
     - name: (04) Remove Netplan
-      command: /tmp/netplan/./netplan_remove.yaml
+      command: /tmp/netplan/./netplan.sh
