@@ -34,3 +34,5 @@
       service:
         name: wazuh-agent
         state: enable
+    - name: Change DB ip
+      command: sed -i 's/^# DBHost=localhost/DBHost=10.80.6.123/g' /etc/zabbix/zabbix_server.conf
