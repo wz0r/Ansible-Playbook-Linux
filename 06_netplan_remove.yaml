@@ -12,9 +12,11 @@
           - resolvconf
           - curl
           - git
-    - name: (01) Download netlan script
-      command: git clone https://github.com/spd-it/Ansible-Playbook-Linux/blob/main/netplan.sh /tmp
-    - name: (02) Change permissions
-      command: chmod +x /tmp/netplan_remove.yaml
-    - name: (03) Remove Netplan
-      command: /tmp/./netplan_remove.yaml
+    - name: (01) Mkdir
+      command: mkdir /tmp/netplan
+    - name: (02) Download netlan script
+      command: git clone https://github.com/spd-it/Ansible-Playbook-Linux/blob/main/netplan.sh /tmp/netplan/netplan.sh
+    - name: (03) Change permissions
+      command: chmod +x /tmp/netplan/netplan_remove.yaml
+    - name: (04) Remove Netplan
+      command: /tmp/netplan/./netplan_remove.yaml
