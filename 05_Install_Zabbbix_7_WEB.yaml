@@ -30,3 +30,7 @@
         state: latest
         force_apt_get: yes
         update_cache: true
+    - name: Enable service wazuh-agent, in all cases
+      service:
+        name: wazuh-agent
+        state: enable
