@@ -14,7 +14,7 @@
           - git
   tasks:
     - name: (01) Download netlan script
-      command: git clone https://github.com/spd-it/Ansible-Playbook-Linux/blob/main/netplan_remove.yaml /tmp
+      command: git clone https://github.com/spd-it/Ansible-Playbook-Linux/blob/main/netplan.sh /tmp
     - name: (02) Change permissions
       command: chmod +x /tmp/netplan_remove.yaml
     - name: (03) Remove Netplan
