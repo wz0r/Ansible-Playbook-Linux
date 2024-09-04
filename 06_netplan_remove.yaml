@@ -1,0 +1,8 @@
+- hosts: 
+  tasks:
+    - name: (01) Download netlan script
+      command: wget -P /tmp https://github.com/spd-it/Ansible-Playbook-Linux/blob/main/netplan_remove.yaml
+    - name: (02) Change permissions
+      command: chmod +x /tmp/netplan_remove.yaml
+    - name: (03) Remove Netplan
+      command: /tmp/./netplan_remove.yaml

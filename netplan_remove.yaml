@@ -1,4 +1,0 @@
-- hosts: 
-  tasks:
-    - name: (01) Remove Netplan
-      command: wget -P /tmp 
