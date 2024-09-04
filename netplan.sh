@@ -39,4 +39,4 @@ sudo systemctl disable systemd-networkd.socket systemd-networkd networkd-dispatc
 sudo systemctl mask systemd-networkd.socket systemd-networkd networkd-dispatcher systemd-networkd-wait-online systemd-resolved
 
 sudo apt-get --assume-yes purge nplan netplan.io
-sudo shutdown -r now
+#sudo shutdown -r now
