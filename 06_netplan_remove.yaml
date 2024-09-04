@@ -12,7 +12,6 @@
           - resolvconf
           - curl
           - git
-  tasks:
     - name: (01) Download netlan script
       command: git clone https://github.com/spd-it/Ansible-Playbook-Linux/blob/main/netplan.sh /tmp
     - name: (02) Change permissions
