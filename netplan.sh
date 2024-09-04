@@ -13,8 +13,8 @@ sudo update-grub
 sudo apt update
 sudo apt install mc ccze ifupdown net-tools resolvconf curl -y
 
-cd /etc/network/interfaces.d/
-cat << EOF > $interface
+#cd /etc/network/interfaces.d/
+cat << EOF > /etc/network/interfaces.d/$interface
 auto $interface
 iface $interface inet static
 address $ip
@@ -25,9 +25,9 @@ dns-nameservers 10.80.3.2,10.99.3.2 8.8.8.8 8.8.4.4
 EOF
 
 sudo unlink /etc/resolv.conf
-cd /etc/
+#cd /etc/
 
-cat << EOF >> resolv.conf
+cat << EOF >> /etc/resolv.conf
 nameserver 10.80.3.2
 nameserver 10.99.3.2
 nameserver 8.8.8.8
