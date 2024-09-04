@@ -30,9 +30,9 @@
         state: latest
         force_apt_get: yes
         update_cache: true
-    - name: Enable service wazuh-agent, in all cases
+    - name: Enable service Zabbix, in all cases
       service:
-        name: wazuh-agent
+        name: zabbix-server
         state: enable
     - name: Change DB ip
       command: sed -i 's/^# DBHost=localhost/DBHost=10.80.6.123/g' /etc/zabbix/zabbix_server.conf
