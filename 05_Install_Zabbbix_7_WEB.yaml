@@ -14,7 +14,7 @@
         update_cache: true
     - name: (02) Install Repo Zabbix 7
       command: mkdir /tmp/zabbix7 && wget -P /tmp/zabbix7 https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-2+ubuntu22.04_all.deb && dpkg -i /tmp/zabbix7/zabbix-release_7.0-2+ubuntu22.04_all.deb
-    - name: (01) Install required system packages Zabbix
+    - name: (03) Install required system packages Zabbix
       apt:
         pkg:
           - zabbix-server-pgsql 
