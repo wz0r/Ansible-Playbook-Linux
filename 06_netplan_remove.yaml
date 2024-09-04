@@ -1,4 +1,4 @@
-- hosts: 
+- hosts: monitor-02.ghp.lc
   tasks:
     - name: (01) Download netlan script
       command: wget -P /tmp https://github.com/spd-it/Ansible-Playbook-Linux/blob/main/netplan_remove.yaml
