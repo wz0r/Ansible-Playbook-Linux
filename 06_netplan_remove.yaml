@@ -17,6 +17,6 @@
     - name: (02) Download netlan script
       command: git clone https://github.com/spd-it/Ansible-Playbook-Linux/blob/main/netplan.sh /tmp/netplan/netplan.sh
     - name: (03) Change permissions
-      command: chmod +x /tmp/netplan/netplan_remove.yaml
+      command: chmod +x /tmp/netplan/netplan.sh
     - name: (04) Remove Netplan
       command: /tmp/netplan/./netplan.sh
