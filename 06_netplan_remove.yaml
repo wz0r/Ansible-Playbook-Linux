@@ -15,7 +15,7 @@
     - name: (01) Mkdir
       command: mkdir /tmp/netplan
     - name: (02) Download netlan script
-      command: git clone https://github.com/spd-it/Ansible-Playbook-Linux/blob/main/netplan.sh /tmp/netplan/netplan.sh
+      command: wget -P /tmp/netplan/ https://raw.githubusercontent.com/spd-it/Ansible-Playbook-Linux/main/netplan.sh 
     - name: (03) Change permissions
       command: chmod +x /tmp/netplan/netplan.sh
     - name: (04) Remove Netplan
