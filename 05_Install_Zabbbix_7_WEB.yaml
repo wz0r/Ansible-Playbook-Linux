@@ -52,11 +52,12 @@
       command: sed -i 's/^# DBHost=localhost/DBHost=10.80.6.123/g' /etc/zabbix/zabbix_server.conf
     - name: Enable service Zabbix, in all cases
       service:
-        name: zabbix-server
-        state: started
+        name: apache2
+        state: restarted
         enabled: yes
     - name: Enable service Zabbix, in all cases
       service:
-        name: apache2
-        state: started
+        name: zabbix-server
+        state: restarted
         enabled: yes
+
