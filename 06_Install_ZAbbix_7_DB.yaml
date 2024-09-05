@@ -25,7 +25,7 @@
           - php-dom 
           - php-zip 
           - php-curl
-          - postgesql
+          - postgresql
         state: latest
         force_apt_get: yes
         update_cache: true
