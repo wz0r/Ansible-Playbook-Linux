@@ -2,7 +2,7 @@
 
 ip=10.80.6.122
 gw=10.80.6.1
-interface=ens32
+interface=ens192
 
 cd /etc/default/
 cp grub grub.$(date +%y%m%d)
