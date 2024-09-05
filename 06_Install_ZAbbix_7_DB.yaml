@@ -12,7 +12,8 @@
           - apt-transport-https
           - lsb-release
           - ca-certificates
-          - php php-mysql 
+          - php 
+          - php-mysql 
           - php-common 
           - php-cli 
           - php-common 
