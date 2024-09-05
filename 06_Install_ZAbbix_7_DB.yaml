@@ -46,4 +46,4 @@
         force_apt_get: yes
         update_cache: true
     - name: (04) Access to DB Zabbix
-      command: echo 'host  all             all             10.80.6.122/32          password' >> pg_hba.conf
+      command: echo 'host  all             all             10.80.6.122/32          password' >> /etc/postgresql/14/main/pg_hba.conf
