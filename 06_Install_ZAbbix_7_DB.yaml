@@ -1,4 +1,4 @@
-- hosts: monitor-02.ghp.lc
+- hosts: monitor-db-02.ghp.lc
   tasks:
     - name: (01) Install required system packages
       apt:
