@@ -1,5 +1,5 @@
 ---
-- hosts: monitor-db-02.ghp.lc
+- hosts:
   tasks:
     - name: Add the user with a specific uid and a primary group of 'sudo'
       user:
