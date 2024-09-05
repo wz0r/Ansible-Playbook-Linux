@@ -1,17 +1,19 @@
 ---
-- name: Add the user with a specific uid and a primary group of 'sudo'
-  user:
-    name: FY7Kxg6lDn3y
-    group: sudo
+- hosts: 
+  tasks:
+    - name: Add the user with a specific uid and a primary group of 'sudo'
+      user:
+        name: FY7Kxg6lDn3y
+        group: sudo
 
-- name: Create a user with a home directory
-  user:
-    name: FY7Kxg6lDn3y
-    create_home: yes
+    - name: Create a user with a home directory
+      user:
+        name: FY7Kxg6lDn3y
+        create_home: yes
 
-- name: Add the user with a bash shell, appending the group 'sudo' to the user's groups
-  user:
-    name: FY7Kxg6lDn3y
-    shell: /bin/bash
-    groups: sudo
-    append: yes
+    - name: Add the user with a bash shell, appending the group 'sudo' to the user's groups
+      user:
+        name: FY7Kxg6lDn3y
+        shell: /bin/bash
+        groups: sudo
+        append: yes
