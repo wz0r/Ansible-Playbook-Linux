@@ -25,6 +25,7 @@
           - php-dom 
           - php-zip 
           - php-curl
+          - apache2
         state: latest
         force_apt_get: yes
         update_cache: true
