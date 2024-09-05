@@ -26,6 +26,7 @@
           - php-zip 
           - php-curl
           - apache2
+          - postgresql
         state: latest
         force_apt_get: yes
         update_cache: true
