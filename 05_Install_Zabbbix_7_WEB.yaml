@@ -9,6 +9,22 @@
           - net-tools
           - mc
           - wget
+          - apt-transport-https
+          - lsb-release
+          - ca-certificates
+          - php php-mysql 
+          - php-common 
+          - php-cli 
+          - php-common 
+          - php-json 
+          - php-opcache 
+          - php-readline 
+          - php-mbstring 
+          - php-gd 
+          - php-dom 
+          - php-zip 
+          - php-curl
+          - postgesql
         state: latest
         force_apt_get: yes
         update_cache: true
