@@ -1,8 +1,8 @@
 #!/bin/bash
 
-ip=10.80.6.122
+ip=10.80.6.123
 gw=10.80.6.1
-interface=ens192
+interface=ens32
 
 cd /etc/default/
 cp grub grub.$(date +%y%m%d)
