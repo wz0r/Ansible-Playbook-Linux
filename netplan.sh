@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ip=10.80.6.122
+ip=10.80.6.123
 gw=10.80.6.1
 interface=ens32
 
