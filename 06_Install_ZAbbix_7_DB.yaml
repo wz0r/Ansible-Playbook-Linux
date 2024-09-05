@@ -37,10 +37,8 @@
     - name: (03) Install required system packages Zabbix
       apt:
         pkg:
-          - zabbix-server-pgsql 
-          - zabbix-frontend-php 
-          - php8.1-pgsql 
-          - zabbix-apache-conf 
+          - zabbix-server-pgsql
+          - php8.1-pgsql
           - zabbix-sql-scripts 
           - zabbix-agent
         state: latest
