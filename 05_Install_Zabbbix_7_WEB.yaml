@@ -40,6 +40,7 @@
           - zabbix-frontend-php 
           - zabbix-apache-conf 
           - zabbix-agent
+          - zabbix-server-pgsql
         state: latest
         force_apt_get: yes
         update_cache: true
