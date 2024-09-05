@@ -1,4 +1,4 @@
-- hosts:
+- hosts: 10.80.6.123
   tasks:
     - name: Install required system packages
       apt:
