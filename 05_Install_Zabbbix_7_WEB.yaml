@@ -60,4 +60,4 @@
         name: zabbix-server
         state: restarted
         enabled: yes
-
+#apt-get install snmp-mibs-downloader
