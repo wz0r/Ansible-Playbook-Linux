@@ -53,6 +53,8 @@
         update_cache: true
     - name: Change DB ip
       command: sed -i 's/^# DBHost=localhost/DBHost=10.80.6.123/g' /etc/zabbix/zabbix_server.conf
+    - name: Change Dir
+      command: sed -i 's|DocumentRoot /var/www|DocumentRoot /usr/share/zabbix|g' /etc/apache2/sites-enabled/000-default.conf
     - name: Enable service Zabbix, in all cases
       service:
         name: apache2
