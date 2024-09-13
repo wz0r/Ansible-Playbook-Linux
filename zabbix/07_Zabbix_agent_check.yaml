@@ -1,7 +1,7 @@
 ---
 - hosts: log-01.ghp.lc
-  tasks:
   gather_facts: yes
+  tasks:
     - name: "Check if Zabbix-agent is installed"
       package_facts:
         manager: "auto"
@@ -9,7 +9,6 @@
       debug: 
         msg: "Zabbix-agent found"
       when: "'zabbix-agent' in ansible_facts.packages"
-
     - name: "Zabbix-agent test result"
       debug: 
         msg: "Zabbix-agent NOT found"
