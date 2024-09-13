@@ -9,7 +9,7 @@
         force_apt_get: yes
         update_cache: true
     - name: (02) Conf zabbix-agent
-        command: sed -i 's/Server=127.0.0.1/Server=10.80.6.122/' zabbix_agentd.conf && sed -i 's/ServerActive=127.0.0.1/ServerActive=10.80.6.122/' zabbix_agentd.conf
+        command: sed -i 's/Server=127.0.0.1/Server=10.80.15.122/' zabbix_agentd.conf && sed -i 's/ServerActive=127.0.0.1/ServerActive=10.80.15.122/' zabbix_agentd.conf
     - name: Restart service "zabbix-agent", in all cases
       service:
         name: zabbix-agent
