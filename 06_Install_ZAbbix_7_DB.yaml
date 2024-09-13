@@ -45,6 +45,8 @@
         state: latest
         force_apt_get: yes
         update_cache: true
+    - name: Change Listener Adress
+      command: sed -i "/listen/s/\#listen_addresses\ =\ 'localhost'/listen_addresses = '*'/g" /etc/postgresql/14/main/postgresql.conf
     - name: (04) Access to DB Zabbix
       command: echo 'host  all             all             10.80.6.122/32          password' >> /etc/postgresql/14/main/pg_hba.conf
       # sudo -u postgres createuser --pwprompt zabbix
