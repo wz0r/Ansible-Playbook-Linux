@@ -8,3 +8,8 @@
         state: latest
         force_apt_get: yes
         update_cache: true
+    - name: Restart service "zabbix-agent", in all cases
+      service:
+        name: zabbix-agent
+        state: started
+        enabled: yes
