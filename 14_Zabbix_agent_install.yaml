@@ -1,0 +1,10 @@
+---
+- hosts: monitor-db-02.ghp.lc
+  tasks:
+    - name: (01) Install required system packages
+      apt:
+        pkg:
+          - zabbix-agent
+        state: latest
+        force_apt_get: yes
+        update_cache: true
