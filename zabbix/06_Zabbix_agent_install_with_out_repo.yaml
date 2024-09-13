@@ -1,18 +1,18 @@
 ---
 - hosts: monitor-db-02.ghp.lc
   tasks:
-    - name: (01) Install required system packages
+    - name: (01-1) Install Zabbix repository
+        command: wget -P /tmp/ https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
+    - name: (01-2) Install Zabbix repository
+        command: dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb
+    - name: (02) Install required system packages
       apt:
         pkg:
           - zabbix-agent
         state: latest
         force_apt_get: yes
         update_cache: true
-    - name: (02-1) Install Zabbix repository
-        command: wget -P /tmp/ https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
-    - name: (02-2) Install Zabbix repository
-        command: dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb
-    - name: (02) Conf zabbix-agent
+    - name: (04) Conf zabbix-agent
         command: sed -i 's/Server=127.0.0.1/Server=10.80.6.122/' zabbix_agentd.conf && sed -i 's/ServerActive=127.0.0.1/ServerActive=10.80.6.122/' zabbix_agentd.conf
     - name: Restart service "zabbix-agent", in all cases
       service:
