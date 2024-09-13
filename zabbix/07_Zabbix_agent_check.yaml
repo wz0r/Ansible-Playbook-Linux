@@ -1,5 +1,5 @@
 ---
-- hosts: Servers
+- hosts: log-01.ghp.lc
   tasks:
   gather_facts: yes
     - name: "Check if Zabbix-agent is installed"
