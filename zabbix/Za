@@ -1,0 +1,16 @@
+---
+- hosts: Servers
+  tasks:
+  gather_facts: yes
+    - name: "Check if Zabbix-agent is installed"
+      package_facts:
+        manager: "auto"
+    - name: "Zabbix agent test result"
+      debug: 
+        msg: "Zabbix-agent found"
+      when: "'zabbix-agent' in ansible_facts.packages"
+
+    - name: "Zabbix-agent test result"
+      debug: 
+        msg: "Zabbix-agent NOT found"
+      when: "'zabbix-agent' not in ansible_facts.packages"
