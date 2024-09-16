@@ -1,5 +1,5 @@
 ---
-- hosts: Servers
+- hosts: servers
   gather_facts: yes
   tasks:
     - name: "Check if Zabbix-agent is installed"
