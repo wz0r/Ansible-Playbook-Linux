@@ -1,0 +1,11 @@
+---
+- hosts: Servers
+  tasks:
+    - name: Replace ip adress Server system
+      shell: sed -i 's/^Server=10.25.15.22,10.80.6.122/Server=10.80.15.122/' /etc/zabbix/zabbix_agentd.conf
+    - name: Replace ip adress ServerActive system
+      shell: sed -i 's/^ServerActive=10.25.15.22,10.80.6.122/Server=10.80.15.122/' /etc/zabbix/zabbix_agentd.conf
+    - name: Restart service zabbix-agent, in all cases
+      service:
+        name: zabbix-agent
+        state: restarted
