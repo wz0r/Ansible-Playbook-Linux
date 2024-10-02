@@ -1,4 +1,4 @@
-- hosts: ca.ghp.lc
+- hosts: ca
   tasks:
     - name: (01) Install required system packages
       apt:
